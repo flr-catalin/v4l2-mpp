@@ -105,6 +105,7 @@ __attribute__((unused)) static int mpp_h264_encoder_init(mpp_enc_ctx_t *ctx, uns
     mpp_enc_cfg_set_s32(ctx->cfg, "prep:hor_stride", width);
     mpp_enc_cfg_set_s32(ctx->cfg, "prep:ver_stride", height);
     mpp_enc_cfg_set_s32(ctx->cfg, "prep:format", fmt);
+    mpp_enc_cfg_set_s32(ctx->cfg, "prep:range", MPP_FRAME_RANGE_JPEG);
     mpp_enc_cfg_set_s32(ctx->cfg, "rc:mode", MPP_ENC_RC_MODE_CBR);
     mpp_enc_cfg_set_s32(ctx->cfg, "rc:bps_target", bitrate * 1000);
     mpp_enc_cfg_set_s32(ctx->cfg, "rc:bps_max", bitrate * 1500);
